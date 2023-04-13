@@ -1,0 +1,125 @@
+/*
+.color1 { #fdf2c5 }; --beige claro
+.color2 { #efe8b2 }; --beige oscuro
+.color3 { #c6d1a6 }; --verde agua
+.color4 { #82bfa0 }; --verde oscuro
+.color5 { #7a6f5d }; --bison
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #7a6f5d;
+}
+.contenedor {
+    display: grid;
+    gap: 5px;
+    background-color: #7a6f5d;
+    padding: 10px;
+    grid-template: repeat(5, 1fr);
+    grid-template-areas: 
+    "menu menu menu menu menu"
+    "publicidad principal principal principal principal"
+    "publicidad principal principal principal principal"
+    "publicidad principal principal principal principal"
+    "pie_pagina pie_pagina pie_pagina pie_pagina pie_pagina";
+    text-align: center;
+}
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+/*.op1:after{
+    content: 'Ir a Home' attr(data-texto);
+    position: absolute;
+    top: 8%;
+    left: 10px;
+    background: #7a6f5d;
+    color: #82bfa0;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5 opacity;
+}
+.op1:hover::after{
+    opacity: 1;
+}
+.op2:after{
+    content: 'Recetas y videos' attr(data-texto);
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    background: #7a6f5d;
+    color: #82bfa0;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5 opacity;
+}
+.op2:hover::after{
+    opacity: 1;
+}
+.op3:after{
+    content: 'Chefs reconocidos' attr(data-texto);
+    position: absolute;
+    top: 8%;
+    left: 16%;
+    background: #7a6f5d;
+    color: #82bfa0;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5 opacity;
+}
+.op3:hover::after{
+    opacity: 1;
+}*/
+
+.principal {
+    grid-area: principal;
+    grid-column: 2/6;
+    background-color: #efe8b2;
+}
+.publicidad {
+    grid-area: publicidad;
+    grid-column: 1/1;
+    background-color: #efe8b2;
+}
+.piepagina {
+    grid-area: pie_pagina;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #efe8b2;
+    padding: 10px;
+}
+.piepagina p{
+    display: flex; justify-content: left;padding-right: 5px;    
+}
+.enlace {
+    display: flex;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fdf2c5;
+    border-radius: 5px;
+}
+.enlace:hover {
+    background-color: #c6d1a6;
+    opacity: 1;
+}
+
+/*  pie de pagina */
+.imgFt {
+    display: inline-block;
+    align-items: flex-end;
+    width: 20px;
+    opacity: 0.5;
+}
+.imgFt:hover{
+    opacity: 1;
+}
