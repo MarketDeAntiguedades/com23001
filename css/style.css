@@ -123,3 +123,12 @@ body {
 .imgFt:hover{
     opacity: 1;
 }
+.imgSm {
+    display: flex;
+    align-items: flex-start;
+    width: 300px;
+    padding: 2%;
+}
+.formulario {
+    padding: 5%;
+}
