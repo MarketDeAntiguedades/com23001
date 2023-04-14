@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 body {
     /*background-color: #7a6f5d;*/
@@ -104,7 +105,6 @@ body {
 }
 .enlace {
     display: flex;
-
     padding: 15px 15px 15px 15px;
     text-decoration: none;
     color: #fdf2c5;
@@ -131,8 +131,20 @@ body {
     display: flex;
     align-items: flex-start;
     width: 300px;
-    padding: 2%;
+    padding: 3%;
 }
 .formulario {
     padding: 5%;
+}
+.boton-submit {
+    background-color: #c6d1a6;
+    padding: 2%;
+    border-radius: 5px;
+    color: #7a6f5d;
+}
+.boton-submit:hover {
+    background-color: #efe8b2;
+}
+.marco {
+    border-radius: 5px;
 }
