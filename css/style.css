@@ -10,7 +10,8 @@
     padding: 0;
 }
 body {
-    background-color: #7a6f5d;
+    /*background-color: #7a6f5d;*/
+    background-image: url('images/logo.jpeg');
 }
 .contenedor {
     display: grid;
@@ -103,7 +104,8 @@ body {
 }
 .enlace {
     display: flex;
-    padding: 10px 30px;
+
+    padding: 15px 15px 15px 15px;
     text-decoration: none;
     color: #fdf2c5;
     border-radius: 5px;
