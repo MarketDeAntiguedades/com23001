@@ -111,6 +111,8 @@ body {
 .enlace:hover {
     background-color: #c6d1a6;
     opacity: 1;
+    text-decoration: none;
+    color: #7a6f5d;
 }
 
 /*  pie de pagina */
