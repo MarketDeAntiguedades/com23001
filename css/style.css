@@ -14,7 +14,7 @@ body {
     background-image: url('images/logo.jpeg');
 }
 aside {
-    margin: 50px;
+    padding: 50px;
 }
 .principal{
     padding: 50px;
@@ -32,12 +32,14 @@ aside {
     "publicidad principal principal principal principal"
     "pie_pagina pie_pagina pie_pagina pie_pagina pie_pagina";
     text-align: center;
+    height: auto;
 }
 .menu {
     grid-area: menu;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;    
 }
 /*.op1:after{
     content: 'Ir a Home' attr(data-texto);
@@ -92,6 +94,7 @@ aside {
     grid-area: principal;
     grid-column: 2/6;
     background-color: #efe8b2;
+
 }
 .publicidad {
     grid-area: publicidad;
@@ -111,11 +114,11 @@ aside {
 }*/
 .enlace {
     display: flex;
-
     padding: 15px 15px 15px 15px;
     text-decoration: none;
     color: #fdf2c5;
     border-radius: 5px;
+    font-size: small;
 }
 .enlace:hover {
     background-color: #c6d1a6;
