@@ -8,16 +8,11 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 body {
     /*background-color: #7a6f5d;*/
     background-image: url('images/logo.jpeg');
-}
-aside {
-    margin: 50px;
-}
-.principal{
-    padding: 50px;
 }
 .contenedor {
     display: grid;
@@ -101,17 +96,15 @@ aside {
 .piepagina {
     grid-area: pie_pagina;
     display: flex;
-    /*justify-content: center;*/
-    flex-direction: column;
-    /*background-color: #efe8b2;*/
-    padding: 0;
+    justify-content: flex-end;
+    background-color: #efe8b2;
+    padding: 10px;
 }
-/*.piepagina p{
+.piepagina p{
     display: flex; justify-content: left;padding-right: 5px;    
-}*/
+}
 .enlace {
     display: flex;
-
     padding: 15px 15px 15px 15px;
     text-decoration: none;
     color: #fdf2c5;
@@ -138,26 +131,20 @@ aside {
     display: flex;
     align-items: flex-start;
     width: 300px;
-    padding: 2%;
+    padding: 3%;
 }
 .formulario {
     padding: 5%;
 }
-
-/* Agregado para la pagina de Expositores - Tulio */
-
-.textexpo{
-    padding: 2% 10% 0 10%;
-    text-align: center;
-    font-style: italic;
-    /* color:#7a6f5d;  */
-    border: 2px solid #7a6f5d;
+.boton-submit {
+    background-color: #c6d1a6;
+    padding: 2%;
+    border-radius: 5px;
+    color: #7a6f5d;
 }
-
-.imgexpo{
-    display: flex;
-    justify-items: center;
-    text-align: left;
-    /* color:#7a6f5d;  */
-    padding-bottom: 2%;
+.boton-submit:hover {
+    background-color: #efe8b2;
+}
+.marco {
+    border-radius: 5px;
 }
