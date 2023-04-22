@@ -5,9 +5,13 @@
 .color4 { #82bfa0 }; --verde oscuro
 .color5 { #7a6f5d }; --bison
 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 body {
     /*background-color: #7a6f5d;*/
@@ -108,10 +112,34 @@ aside {
     flex-direction: column;
     /*background-color: #efe8b2;*/
     padding: 0;
+    width: 100%;
+    background-color: #82bfa0;    
 }
-/*.piepagina p{
-    display: flex; justify-content: left;padding-right: 5px;    
-}*/
+.piepagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:50px;
+    padding: 0;
+    align-items: center;
+}
+.piepagina .grupo-2{
+    background-color: #7a6f5d;
+    /*padding: 3px 0px 2px;*/
+    padding: 0;
+    text-align: center;
+    color: #fff;
+}
+.ribbon {
+    width: 20%;
+    height: 0px;
+    border-left: 50px solid #7a6f5d;
+    border-right: 50px solid #82bfa0;
+    border-bottom: 60px solid #7a6f5d;
+    border-top: 60px solid #7a6f5d;
+}
 .enlace {
     display: flex;
     padding: 15px 15px 15px 15px;
