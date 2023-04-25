@@ -14,14 +14,23 @@
     font-family: 'Open Sans', sans-serif;
 }
 body {
-    /*background-color: #7a6f5d;*/
-    background-image: url('images/logo.jpeg');
+    background-color: #7a6f5d;
+/*    background-image: url('images/logo.jpeg');*/
 }
 aside {
     padding: 50px;
 }
+th {
+    padding: 10px;
+}
+td {
+    padding: 10px;
+}
+.tr-titulo {
+    border-bottom: #7a6f5d solid 1pt;
+}
 .principal{
-    padding: 50px;
+    padding: 30px;
 }
 .contenedor {
     display: grid;
@@ -45,60 +54,10 @@ aside {
     justify-content: flex-start;
     align-items: center;    
 }
-/*.op1:after{
-    content: 'Ir a Home' attr(data-texto);
-    position: absolute;
-    top: 8%;
-    left: 10px;
-    background: #7a6f5d;
-    color: #82bfa0;
-    padding: 2px;
-    border: 1px solid;
-    border-radius: 5px;
-    opacity: 0;
-    transition: 0.5 opacity;
-}
-.op1:hover::after{
-    opacity: 1;
-}
-.op2:after{
-    content: 'Recetas y videos' attr(data-texto);
-    position: absolute;
-    top: 8%;
-    left: 8%;
-    background: #7a6f5d;
-    color: #82bfa0;
-    padding: 2px;
-    border: 1px solid;
-    border-radius: 5px;
-    opacity: 0;
-    transition: 0.5 opacity;
-}
-.op2:hover::after{
-    opacity: 1;
-}
-.op3:after{
-    content: 'Chefs reconocidos' attr(data-texto);
-    position: absolute;
-    top: 8%;
-    left: 16%;
-    background: #7a6f5d;
-    color: #82bfa0;
-    padding: 2px;
-    border: 1px solid;
-    border-radius: 5px;
-    opacity: 0;
-    transition: 0.5 opacity;
-}
-.op3:hover::after{
-    opacity: 1;
-}*/
-
 .principal {
     grid-area: principal;
     grid-column: 2/6;
     background-color: #efe8b2;
-
 }
 .publicidad {
     grid-area: publicidad;
@@ -154,6 +113,23 @@ aside {
     text-decoration: none;
     color: #7a6f5d;
 }
+.enlace-receta {
+    padding: 15px 15px 15px 15px;
+    text-decoration: none;
+    color: #82bfa0;
+    border-radius: 5px;
+    font-size: small;
+}
+.enlace-receta:hover {
+    background-color: #c6d1a6;
+    opacity: 1;
+    text-decoration: none;
+    color: #7a6f5d;
+}
+
+.marco {
+    border-radius: 2%;
+}
 
 /*  pie de pagina */
 .imgFt {
@@ -178,17 +154,22 @@ aside {
 /* Agregado para la pagina de Expositores - Tulio */
 
 .textexpo{
-    padding: 2% 10% 0 10%;
+    padding: 1% 5% 0 5%;
     text-align: center;
     font-style: italic;
     /* color:#7a6f5d;  */
     border: 2px solid #7a6f5d;
+    border-radius: 5px;
+}
+.textexpo h4 {
+    font-size: 1.5rem;
 }
 
 .imgexpo{
     display: flex;
-    justify-items: center;
+    justify-content: space-around;
     text-align: left;
     /* color:#7a6f5d;  */
-    padding-bottom: 2%;
+    padding-bottom: 3%;
+    padding-top: 2%;
 }
