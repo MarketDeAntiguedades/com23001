@@ -15,10 +15,10 @@
 }
 body {
     background-color: #7a6f5d;
-/*    background-image: url('images/logo.jpeg');*/
+/*    background-image: url('images/');*/
 }
 aside {
-    padding: 50px;
+    padding: 15px;
 }
 th {
     padding: 10px;
@@ -31,6 +31,7 @@ td {
 }
 .principal{
     padding: 30px;
+
 }
 .contenedor {
     display: grid;
@@ -40,9 +41,10 @@ td {
     grid-template: repeat(5, 1fr);
     grid-template-areas: 
     "menu menu menu menu menu"
-    "publicidad principal principal principal principal"
-    "publicidad principal principal principal principal"
-    "publicidad principal principal principal principal"
+    "principal principal principal principal principal"
+    "principal principal principal principal principal"
+    "principal principal principal principal principal"
+    "publicidad publicidad publicidad publicidad publicidad"
     "pie_pagina pie_pagina pie_pagina pie_pagina pie_pagina";
     text-align: center;
     height: auto;
@@ -56,12 +58,12 @@ td {
 }
 .principal {
     grid-area: principal;
-    grid-column: 2/6;
+    grid-column: 1/6;
     background-color: #efe8b2;
 }
 .publicidad {
     grid-area: publicidad;
-    grid-column: 1/1;
+    grid-column: 1/6;
     background-color: #efe8b2;
 }
 .piepagina {
@@ -172,4 +174,52 @@ td {
     /* color:#7a6f5d;  */
     padding-bottom: 3%;
     padding-top: 2%;
+}
+.contenedor-quien {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+    justify-content: space-around;
+}
+.item {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.texto {
+    background-color: #82bfa0;   
+    border-radius: 5px; 
+    border: 2px solid #7a6f5d;
+    color: #7a6f5d;
+    padding: 5px;
+}
+.texto a{
+    text-decoration: none;
+    color: #7a6f5d;
+}
+.texto img {
+    padding: 5px;
+}
+#redonda {
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border: solid 3px white;
+    overflow:hidden; /* Evitar que el contenido se visualice fuera del borde*/
+}
+#circulo {
+    float: unset;
+    width: 200px;
+    height: 200px;
+    margin: 80px;
+    shape-outside: inset();
+    clip-path: circle();
+    background: lightblue;
+}
+.boton-submit {
+    padding: 5px;
+    border-radius: 5px;
+}
+.boton-submit:hover {
+    background-color: #82bfa0;
+    padding: 5px;
 }
