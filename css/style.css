@@ -162,6 +162,8 @@ td {
     /* color:#7a6f5d;  */
     border: 2px solid #7a6f5d;
     border-radius: 5px;
+    background-color: #82bfa0;
+    color: #7a6f5d;
 }
 .textexpo h4 {
     font-size: 1.5rem;
@@ -198,6 +200,9 @@ td {
 }
 .texto img {
     padding: 5px;
+}
+table{
+    width: 100%;
 }
 #redonda {
     width:200px;
