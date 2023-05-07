@@ -24,9 +24,6 @@ document.getElementById("idPieDePagina").innerHTML = `
         <img src="images/logo.jpeg" alt="Placeres de Oriente Logo" style="width:100px;height:100px;">
     </div>
     <div class="box">
-<!--                        <h2>SOBRE NOSOTROS</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>-->
     </div>
     <div class="box">
         <h2>PARA SEGUIRNOS</h2>
