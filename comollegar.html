@@ -22,7 +22,7 @@
         </div>
         <div class="publicidad">
             <aside>
-                publicidad
+                <div id="changeText"></div>
             </aside>
         </div>
         <div class="principal">
@@ -36,5 +36,21 @@
         </div>
     </div>
     <script src="includes/includes.js"></script>    
+    <script type="text/javascript">
+        var text = ["Movistar - Internet Fibra Movistar", "Eco de los Andes - Agua de Montaña", "Claro - WIFI Fibra en tu casa"];
+        var counter = 0;
+        var elem = document.getElementById("changeText");
+        var inst = setInterval(change, 5000);
+
+        function change() {
+        elem.innerHTML = text[counter];
+        counter++;
+            if (counter >= text.length) {
+                counter = 0;
+                // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+            }
+        }            
+    </script>
+
 </body>
 </html>
