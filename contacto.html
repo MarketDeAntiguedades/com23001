@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilos-footer.css">
 
     <script src="https://kit.fontawesome.com/e9aa5b2bf5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/jquery.min.js"></script>
@@ -25,32 +26,72 @@
                 <div id="changeText"></div>
             </aside>
         </div>
-        <div class="principal">
+        <div id="form" class="principal" v-if="success">
+            <span v-if="msg.success" className="text-danger mrgnbtn">{{ msg.success }}</span>            
             <main>
                 <div class="formulario">
-                <form>
+                <form ref="form" @submit.prevent="submit" v-if="!success">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Direcci&oacute;n de Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                      <small id="emailHelp" class="form-text text-muted">Compartiremos el mail con el p&uacute;blico asistente</small>
+                      <input for="email" class="form-control" placeholder="Enter email" v-model="email" @blur="validateEmail"><img v-if="msg.email" src="images/alerta.png" width="20" alt="">
+                      <span v-if="msg.email" className="text-danger mrgnbtn">{{ msg.email }}</span>
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input for="password" v-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"><img v-if="msg.checkdata" src="images/alerta.png" width="20" alt="">
+                      <span v-if="msg.checkdata" className="text-danger mrgnbtn">{{ msg.checkdata }}</span>
                     </div>
-<!--                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>-->
-<!--                    <button type="submit" class="btn btn-primary">Suscribirme</button>-->
-                    <button type="submit" class="boton-submit">Suscribirme</button>
-                  </form>
-                  </div>
+                    <button type="button" class="boton-submit" v-on:click="checkData">Suscribirme</button>
+                </form>
+<!--                <span v-if="msg.success" className="text-danger mrgnbtn">{{ msg.success }}</span>-->
+            </div>
             </main>
         </div>
         <div class="piepagina" id="idPieDePagina">
         </div>
     </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                email: '',
+                password: '',
+                success: false,
+                msg: [],
+                flag: 0,
+                }
+            },
+            methods: {
+                validateEmail() {
+                    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+                        this.msg['email'] = '';
+                    } else {
+                        this.msg['email'] = ' Email inválido o formato erroneo.'
+                    }
+                },
+                checkData() {
+                    if  (this.email.trim().length === 0) {
+                        this.msg['checkdata'] = 'informe mail'
+                        this.success=false;
+                    }
+                    if  (this.password.trim().length == 0) {
+                        this.msg['checkdata'] = 'informe contraseña'
+                        this.success=fase;
+                    }
+                    if  (this.password.trim().length < 8) {
+                        this.msg['checkdata'] = 'La contraseña tiene que tener al menos 8 dígitos.'
+                        this.success=false
+                    }else {
+                        this.msg['checkdata'] = ''
+                    }
+                    this.success=true
+                    this.msg['success'] = 'Se ha generado la subscripción. Gracias!.'
+
+                        //this.$refs.form.submit()
+                }
+            }
+        }).mount('#form')
+    </script>
     <script src="includes/includes.js"></script>
     <script type="text/javascript">
         var text = ["Movistar - Internet Fibra Movistar", "Eco de los Andes - Agua de Montaña", "Claro - WIFI Fibra en tu casa"];
@@ -67,5 +108,6 @@
             }
         }            
     </script>
+    
 </body>
 </html>
