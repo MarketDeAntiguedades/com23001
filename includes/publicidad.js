@@ -1,13 +1,14 @@
-var text = ["Welcome", "Hi", "Sup dude"];
-var counter = 0;
-var elem = document.getElementById("changeText");
-var inst = setInterval(change, 1000);
+fetch('https://type.fit/api/quotes')
+.then(response => response.json())
+.then(function(text){
+    var temp = '';
+    var contador = 0;
+    var inst = setInterval(change, 8000);
+    function change(){
+        document.getElementById('changeText').innerHTML = text[contador].text;
+        contador++;
+        if (contador >= text.length) {
+            contador = 0;
+        }
+    }})
 
-function change() {
-  elem.innerHTML = text[counter];
-  counter++;
-  if (counter >= text.length) {
-    counter = 0;
-    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
-  }
-}        
