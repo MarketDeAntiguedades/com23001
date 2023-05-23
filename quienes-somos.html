@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expositores</title>
+    <title>Quienes Somos</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/curry.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos-footer.css">
@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/e9aa5b2bf5.js" crossorigin="anonymous"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>    
 </head>
@@ -65,41 +65,13 @@
                         <a href="mailto:tulio.salatino@placeresdeoriente.com.ar">Email: tulio.salatino@placeresdeoriente.com.ar</a>                         
                     </div>
                 </div>
-<!--                <div class="textquienessomos">
-                    <h4>Somos un empresa, sin fines de  lucro, especializada en brindar información acerca de los placeres de la comida oriental.
-                        <br>
-                    Tal información la realizamos mediante exposiciones, donde contamos con profesionales expositores del ámbito culinario oriental. 
-                    <br><br>
-                    La empresa está conformada por 3 profesionales del rubro:   
-                    </h4>
-                </div>    
-                <div class="textquienessomos">
-                    <h4>
-                        <br>
-                        Para mayor información, dirigirse a nuestra oficina cito en Malabia 1500, CABA, o bien 
-                        comunicarse al 011 4378-8400.
-                    </h4>   
-                </div>               -->
            </main>
          </div>
          <div class="piepagina" id="idPieDePagina">
         </div>
     </div>
-    <script src="includes/includes.js"></script>
-    <script>
-        fetch('https://type.fit/api/quotes')
-        .then(response => response.json())
-        .then(function(text){
-            var temp = '';
-            var contador = 0;
-            var inst = setInterval(change, 8000);
-            function change(){
-                document.getElementById('changeText').innerHTML = text[contador].text;
-                contador++;
-                if (contador >= text.length) {
-                    contador = 0;
-                }
-            }})
+    <script src="includes/includes.js" type="javascript/text"></script>
     </script>
 </body>
+<script src="js/quotes.js"></script>
 </html>
