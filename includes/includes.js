@@ -1,7 +1,7 @@
 document.getElementById("idMenu").innerHTML =  `
 <head>
 <a href="index.html" class="enlace op1">Inicio</a>
-<a href="recetas.html" class="enlace op2">Recetas</a>
+<a href="recetas.html" class="enlace op2" >Recetas</a>
 <a href="expositores.html" class="enlace op3">Expositores</a>
 <a href="comollegar.html" class="enlace">Como llegar</a>
 <a href="quienes-somos.html" class="enlace">Quienes somos</a>
