@@ -114,6 +114,9 @@ td {
     opacity: 1;
     text-decoration: none;
     color: #7a6f5d;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
 }
 .enlace-receta {
     padding: 15px 15px 15px 15px;
@@ -193,6 +196,7 @@ td {
     border: 2px solid #7a6f5d;
     color: #7a6f5d;
     padding: 5px;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .texto a{
     text-decoration: none;
